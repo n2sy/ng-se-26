@@ -4,6 +4,5 @@ import { Component } from '@angular/core';
   selector: 'app-first',
   imports: [],
   templateUrl: './first.html',
-  styleUrl: './first.css',
 })
 export class First {}
