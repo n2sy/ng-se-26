@@ -5,4 +5,9 @@ import { Component } from '@angular/core';
   imports: [],
   templateUrl: './first.html',
 })
-export class First {}
+export class First {
+  prenom: string = 'Lotfi';
+  section: string = 'SE';
+  bgColor: string = 'pink';
+  hide: boolean = true;
+}
