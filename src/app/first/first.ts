@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Second } from '../second/second';
+import { Candidat } from '../models/candidat.model';
 
 @Component({
   selector: 'app-first',
-  imports: [FormsModule],
+  imports: [FormsModule, Second],
   templateUrl: './first.html',
 })
 export class First {
@@ -20,5 +22,9 @@ export class First {
     console.log(inp);
 
     this.prenom = inp.value;
+  }
+
+  lireMessage(msg: string) {
+    alert(msg);
   }
 }

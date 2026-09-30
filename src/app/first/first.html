@@ -15,3 +15,9 @@
 <input #inp [value]="prenom" (input)="updatePrenom(inp)" type="text" class="form-control" />
 
 {{ inp.value }}
+
+<hr />
+
+<app-second (eventToParent)="lireMessage($event)" [txtColor]="'blue'"> </app-second>
+
+<hr />
