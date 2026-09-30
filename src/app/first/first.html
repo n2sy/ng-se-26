@@ -2,3 +2,16 @@
 <br />
 
 <div [hidden]="hide" [style.backgroundColor]="bgColor">Exemple de Binding</div>
+
+<br />
+
+<button (click)="clickHandler()" class="btn btn-primary">Click me</button>
+<br />
+
+<label>Student Name</label>
+<input [(ngModel)]="prenom" type="text" class="form-control" />
+
+<label>Student Name (Manuelle)</label>
+<input #inp [value]="prenom" (input)="updatePrenom(inp)" type="text" class="form-control" />
+
+{{ inp.value }}
