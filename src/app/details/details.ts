@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Candidat } from '../models/candidat.model';
 
 @Component({
   selector: 'app-details',
@@ -6,4 +7,6 @@ import { Component } from '@angular/core';
   templateUrl: './details.html',
   styleUrl: './details.css',
 })
-export class Details {}
+export class Details {
+  @Input() selectedCandidate: Candidat;
+}
