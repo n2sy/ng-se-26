@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
-import { Item } from '../../item/item';
 import { AddAccount } from '../add-account/add-account';
 import { Liste } from '../../liste/liste';
 import { ItemAccount } from '../item-account/item-account';
 
 @Component({
   selector: 'app-home-accounts',
-  imports: [Item, AddAccount, ItemAccount],
+  imports: [AddAccount, ItemAccount],
   templateUrl: './home-accounts.html',
   styleUrl: './home-accounts.css',
 })

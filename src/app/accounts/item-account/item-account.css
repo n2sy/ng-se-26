@@ -1,0 +1,33 @@
+:host {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.bordure {
+  background: var(--c-surface);
+  border: 1px solid var(--c-line);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-1);
+  padding: 1.25rem 1.5rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+hr {
+  margin: 0.9rem 0;
+}
+
+p {
+  color: var(--c-muted);
+  font-size: 0.9rem;
+  margin-bottom: 1.1rem;
+}
+
+.btn {
+  --bs-btn-padding-y: 0.35rem;
+  --bs-btn-padding-x: 0.75rem;
+  --bs-btn-font-size: 0.82rem;
+}
