@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { Item } from '../../item/item';
 import { AddAccount } from '../add-account/add-account';
 import { Liste } from '../../liste/liste';
-import { ListAccounts } from '../list-accounts/list-accounts';
+import { ItemAccount } from '../item-account/item-account';
 
 @Component({
   selector: 'app-home-accounts',
-  imports: [Item, AddAccount, Liste, ListAccounts],
+  imports: [Item, AddAccount, ItemAccount],
   templateUrl: './home-accounts.html',
   styleUrl: './home-accounts.css',
 })
