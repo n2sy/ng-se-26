@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Item } from '../item/item';
+import { Candidat } from '../models/candidat.model';
 
 @Component({
   selector: 'app-liste',
@@ -7,4 +8,6 @@ import { Item } from '../item/item';
   templateUrl: './liste.html',
   styleUrl: './liste.css',
 })
-export class Liste {}
+export class Liste {
+  @Input() tabCandidates: Candidat[] = [];
+}
