@@ -1,0 +1,13 @@
+.c1 {
+    background-color: azure;
+    color : red
+}
+.c2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+.c3 {
+    border: 5px dashed green;
+    border-radius: 25px;
+}
