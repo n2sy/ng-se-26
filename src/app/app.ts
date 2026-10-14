@@ -5,10 +5,11 @@ import { Second } from './second/second';
 import { Cv } from './cv/cv';
 import { HomeAccounts } from './accounts/home-accounts/home-accounts';
 import { Direct } from './direct/direct';
+import { ManageServers } from './manage-servers/manage-servers';
 
 @Component({
   selector: 'app-root',
-  imports: [First, Second, Cv, HomeAccounts, Direct],
+  imports: [First, Second, Cv, HomeAccounts, Direct, ManageServers],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
