@@ -1,1 +1,15 @@
-<p>item-account works!</p>
+
+<div class="bordure">
+    <h3> {{ oneAccount.name }} </h3>
+    
+    <br>
+    
+    <p>This account is {{ oneAccount.status }} </p>
+    
+    <button [disabled]="oneAccount.status == 'active'" class="btn btn-success" (click)="updateStatus('active')">Set to 'active'</button>
+    <button [disabled]="oneAccount.status == 'inactive'" class="btn btn-danger" (click)="updateStatus('inactive')">Set to 'inactive'</button>
+    <button [disabled]="oneAccount.status == 'unknown'" class="btn btn-info" (click)="updateStatus('unknown')">Set to 'unknown'</button>
+    
+</div>
+
+

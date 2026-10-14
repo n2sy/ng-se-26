@@ -20,4 +20,8 @@ export class HomeAccounts {
       status: 'inactive',
     },
   ];
+  
+  addAccount(newAccount: any) {
+    this.allAccounts.push(newAccount);
+  }
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-item-account',
@@ -6,4 +6,10 @@ import { Component } from '@angular/core';
   templateUrl: './item-account.html',
   styleUrl: './item-account.css',
 })
-export class ItemAccount {}
+export class ItemAccount {
+    @Input() oneAccount : any;
+    
+    updateStatus(newStatus) {
+        this.oneAccount.status = newStatus
+    }
+}
