@@ -6,10 +6,11 @@ import { Cv } from './cv/cv';
 import { HomeAccounts } from './accounts/home-accounts/home-accounts';
 import { Direct } from './direct/direct';
 import { ManageServers } from './manage-servers/manage-servers';
+import { Recrues } from './recrues/recrues';
 
 @Component({
     selector: 'app-root',
-    imports: [Second, Cv, HomeAccounts, Direct, ManageServers],
+    imports: [Second, Cv, HomeAccounts, Direct, ManageServers, Recrues],
     templateUrl: './app.html',
     styleUrl: './app.css',
     providers: []
