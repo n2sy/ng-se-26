@@ -1,22 +1,38 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Liste } from '../liste/liste';
 import { Details } from '../details/details';
 import { Candidat } from '../models/candidat.model';
+import { First } from '../services/first';
+import { GestionCandidats } from '../services/gestion-candidats';
 
 @Component({
     selector: 'app-cv',
     imports: [Liste, Details],
     templateUrl: './cv.html',
     styleUrl: './cv.css',
+    providers: [First]
 })
 export class Cv {
     allCandidates: Candidat[] = [
-        new Candidat(1, 'bart', 'simpson', 23, 'Ing DevOps', 'bart.jpeg'),
-        new Candidat(2, 'homer', 'simpson', 44, 'Chef de projet', 'homer.png'),
-        new Candidat(3, 'lisa', 'simpson', 21, 'Designer', 'lisa.png'),
-        new Candidat(4, 'marge', 'simpson', 48, 'Designer'),
     ];
     selCand: Candidat;
+
+    //constructor(private firstSer: First) { }
+    private firstSer = inject(First)
+    private candidatSer = inject(GestionCandidats)
+
+    ngOnInit() {
+        this.firstSer.showInfos()
+        this.allCandidates = this.candidatSer.getAllCandidates()
+    }
+
+    addCandidate() {
+        this.candidatSer.addNewCandidate();
+    }
+
+    showCandidatesList() {
+        console.log(this.candidatSer.getAllCandidates())
+    }
 
     recupererCandidat(cand: Candidat) {
         this.selCand = cand;
