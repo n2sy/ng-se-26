@@ -1,18 +1,19 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Candidat } from '../models/candidat.model';
+import { NoAvatarPipe } from '../pipes/no-avatar-pipe';
 
 @Component({
-  selector: 'app-item',
-  imports: [],
-  templateUrl: './item.html',
-  styleUrl: './item.css',
+    selector: 'app-item',
+    imports: [NoAvatarPipe],
+    templateUrl: './item.html',
+    styleUrl: './item.css',
 })
 export class Item {
-  @Input() oneCandidate: Candidat;
+    @Input() oneCandidate: Candidat;
 
-  @Output() eventToListe = new EventEmitter<Candidat>();
+    @Output() eventToListe = new EventEmitter<Candidat>();
 
-  sendEventToListe() {
-    this.eventToListe.emit(this.oneCandidate);
-  }
+    sendEventToListe() {
+        this.eventToListe.emit(this.oneCandidate);
+    }
 }

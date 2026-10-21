@@ -39,6 +39,15 @@ export class ManageServers {
         },
     ];
 
+    addServer() {
+        this.allServers.push({
+            name: 'NEW SERVER',
+            type: "medium",
+            status: "stable",
+            date_d: new Date(2024, 5, 6)
+        })
+    }
+
     affecterClasse(st: string) {
         return {
             'list-group-item-danger': st == 'critical',
