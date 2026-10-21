@@ -1,7 +1,5 @@
 <app-add-account (eventToHomeAccounts)="addAccount($event)"></app-add-account>
 
 @for (account of allAccounts; track $index) {
-    <app-item-account [oneAccount]="account"></app-item-account>
+  <app-item-account [oneAccount]="account"></app-item-account>
 }
-
-
