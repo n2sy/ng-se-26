@@ -5,13 +5,14 @@ import { Candidat } from '../models/candidat.model';
 import { First } from '../services/first';
 import { GestionCandidats } from '../services/gestion-candidats';
 import { Recrues } from '../recrues/recrues';
+import { GestionRecrues } from '../services/gestion-recrues';
 
 @Component({
     selector: 'app-cv',
     imports: [Liste, Details, Recrues],
     templateUrl: './cv.html',
     styleUrl: './cv.css',
-    providers: [First]
+    providers: [First, GestionRecrues]
 })
 export class Cv {
     allCandidates: Candidat[] = [

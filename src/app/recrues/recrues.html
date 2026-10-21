@@ -1,1 +1,14 @@
-<p>recrues works!</p>
+
+@if(recrueService.getAllRecrues().length) {
+    <h4>Liste des recrues</h4>
+    <ol class="list-group">
+        @for(recrue of recrueService.getAllRecrues(); track $index){
+            <app-item [oneCandidate]="recrue"></app-item>
+        }
+    </ol>
+    
+}
+
+@else {
+    <h6>Vous n'avez pas encore recruter...</h6>
+}
