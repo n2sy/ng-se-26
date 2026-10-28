@@ -7,18 +7,20 @@ import { HomeAccounts } from './accounts/home-accounts/home-accounts';
 import { Direct } from './direct/direct';
 import { ManageServers } from './manage-servers/manage-servers';
 import { Recrues } from './recrues/recrues';
+import { ExpSignals } from './exp-signals/exp-signals';
+import { HomeProducts } from './products/home-products/home-products';
 
 @Component({
-    selector: 'app-root',
-    imports: [Second, Cv, HomeAccounts, Direct, ManageServers, Recrues],
-    templateUrl: './app.html',
-    styleUrl: './app.css',
-    providers: []
+  selector: 'app-root',
+  imports: [Second, Cv, HomeAccounts, Direct, ManageServers, Recrues, ExpSignals, HomeProducts],
+  templateUrl: './app.html',
+  styleUrl: './app.css',
+  providers: [],
 })
 export class App {
-    protected readonly title = signal('ng-sof-26');
+  protected readonly title = signal('ng-sof-26');
 
-    recupererMsg(msg: string) {
-        console.log(msg);
-    }
+  recupererMsg(msg: string) {
+    console.log(msg);
+  }
 }
