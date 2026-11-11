@@ -1,1 +1,22 @@
-<p>add-product works!</p>
+<table class="table striped">
+    <tr>
+        <td>
+            <input #name class="form-control" placeholder="Enter product name">
+        </td>
+        <td>
+            <input #price placeholder="enter product price" class="form-control" type="number">
+        </td>
+        <td>
+            <input #selected type="checkbox">
+        </td>
+        <td>
+            <button (click)="productService.addProduct(
+                {
+                    name : name.value,
+                    price : price.value,
+                    qty : selected.checked
+                }
+            )" class="btn btn-success">Add</button>
+        </td>
+    </tr>
+</table>

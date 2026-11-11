@@ -1,9 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { GestionProducts } from '../../services/gestion-products';
 
 @Component({
-  selector: 'app-add-product',
-  imports: [],
-  templateUrl: './add-product.html',
-  styleUrl: './add-product.css',
+    selector: 'app-add-product',
+    imports: [],
+    templateUrl: './add-product.html',
+    styleUrl: './add-product.css',
 })
-export class AddProduct {}
+export class AddProduct {
+    public productService = inject(GestionProducts);
+
+
+
+}

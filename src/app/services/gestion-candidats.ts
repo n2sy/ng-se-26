@@ -1,10 +1,12 @@
-import { Injectable } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 import { Candidat } from '../models/candidat.model';
 
 @Injectable({
     providedIn: 'root',
 })
 export class GestionCandidats {
+    //selectedCandidate = signal(null);
+
     private allCandidates: Candidat[] = [
         new Candidat(1, 'bart', 'simpson', 23, 'Ing DevOps', 'bart.jpeg'),
         new Candidat(2, 'homer', 'simpson', 44, 'Chef de projet', 'homer.png'),

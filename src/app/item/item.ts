@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, input, Input, output, Output } from '@angular/core';
 import { Candidat } from '../models/candidat.model';
 import { NoAvatarPipe } from '../pipes/no-avatar-pipe';
 import { Highlight } from '../highlight';
@@ -10,11 +10,13 @@ import { Highlight } from '../highlight';
     styleUrl: './item.css',
 })
 export class Item {
-    @Input() oneCandidate: Candidat;
+    oneCandidate = input.required<Candidat>();
+    //@Input({required : true}) oneCandidate2: Candidat;
 
-    @Output() eventToListe = new EventEmitter<Candidat>();
+    //@Output() eventToListe = new EventEmitter<Candidat>();
+    eventToListe = output<Candidat>()
 
     sendEventToListe() {
-        this.eventToListe.emit(this.oneCandidate);
+        this.eventToListe.emit(this.oneCandidate());
     }
 }
