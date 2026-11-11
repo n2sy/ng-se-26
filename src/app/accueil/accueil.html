@@ -2,12 +2,13 @@
 
 <h5>Navigation côté HTML</h5>
 
+<!-- <a href="/accounts">Vers Accounts</a> -->
 <a routerLink="/cv" class="btn btn-primary">Go To CV</a>
 <a [routerLink]="['cv', targetId ]" class="btn btn-warning">Go To Infos</a>
 <!-- <button routerLink="/cv/{{targetId}}" class="btn btn-warning">Go To Infos</button> DECONSEILLE -->
  
 <br>
-<h5>Navigation côté HTML</h5>
+<h5>Navigation côté TS</h5>
 
 <button (click)="goToAccounts()" class="btn btn-danger">Go To Accounts</button>
 <button (click)="goToInfos()" class="btn btn-info">Go To Infos</button>

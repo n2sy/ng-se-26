@@ -9,10 +9,11 @@ import { ManageServers } from './manage-servers/manage-servers';
 import { Recrues } from './recrues/recrues';
 import { ExpSignals } from './exp-signals/exp-signals';
 import { HomeProducts } from './products/home-products/home-products';
+import { Navbar } from './navbar/navbar';
 
 @Component({
     selector: 'app-root',
-    imports: [Second, Cv, HomeAccounts, Direct, ManageServers, Recrues, ExpSignals, HomeProducts, RouterOutlet],
+    imports: [Second, Cv, HomeAccounts, Direct, ManageServers, Recrues, ExpSignals, HomeProducts, RouterOutlet, Navbar],
     templateUrl: './app.html',
     styleUrl: './app.css',
     providers: [],

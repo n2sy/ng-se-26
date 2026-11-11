@@ -11,6 +11,7 @@ export const myroutes: Routes = [
     { path: "cv/:candidatId", loadComponent: () => import('./infos/infos').then(c => c.Infos) },
     { path: "accounts", loadComponent: () => import('./accounts/home-accounts/home-accounts').then(c => c.HomeAccounts) },
     { path: "products", loadComponent: () => import('./products/home-products/home-products').then(c => c.HomeProducts) },
+    { path: "servers", loadComponent: () => import('./manage-servers/manage-servers').then(c => c.ManageServers) },
 ]
 
 
