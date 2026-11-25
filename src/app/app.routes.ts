@@ -25,4 +25,12 @@ export const myroutes: Routes = [
     path: 'servers',
     loadComponent: () => import('./manage-servers/manage-servers').then((c) => c.ManageServers),
   },
+  {
+    path: 'not-found',
+    loadComponent: () => import('./not-found/not-found').then((c) => c.NotFound),
+  },
+  {
+    path: '**',
+    redirectTo: 'not-found',
+  },
 ];

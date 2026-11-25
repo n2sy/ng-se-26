@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { ActivatedRoute, ParamMap, RouterLink } from '@angular/router';
+import { ActivatedRoute, ParamMap, Router, RouterLink } from '@angular/router';
 import { GestionCandidats } from '../services/gestion-candidats';
 import { Candidat } from '../models/candidat.model';
 import { NoAvatarPipe } from '../pipes/no-avatar-pipe';
@@ -15,6 +15,7 @@ export class Infos {
   candidateToShow: Candidat;
   private actRoute = inject(ActivatedRoute);
   private candService = inject(GestionCandidats);
+  private router = inject(Router);
 
   ngOnInit() {
     // V1
@@ -30,5 +31,6 @@ export class Infos {
     this.candidateToShow = this.candService.getCandidatById(
       this.actRoute.snapshot.paramMap.get('candidatId'),
     );
+    if (!this.candidateToShow) this.router.navigateByUrl('/not-found');
   }
 }
