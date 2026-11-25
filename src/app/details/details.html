@@ -51,7 +51,10 @@
       </div>
       <div class="footer">
         <div class="social-links text-center">
-          <button (click)="recrueService.addRecrue(selectedCandidate)" class="btn btn-success">Recruter</button>
+          <button (click)="recrueService.addRecrue(selectedCandidate)" class="btn btn-success">
+            Recruter
+          </button>
+          <button [routerLink]="[selectedCandidate._id]" class="btn btn-info">Details</button>
         </div>
       </div>
     </div>
